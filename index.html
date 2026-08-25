@@ -553,12 +553,18 @@ button{touch-action:manipulation}
     <section class="section">
       <div class="eyebrow">Confirmación de asistencia</div>
       <h2 class="script" style="font-size:2.4rem;margin:8px 0 0">¿Nos acompañas?</h2>
-      <p class="subtitle">Confirma tu asistencia por WhatsApp para esperarte en este día tan especial.</p>
+      <p class="subtitle">Elige con quién deseas confirmar tu asistencia por WhatsApp.</p>
 
       <div class="actions">
-        <button id="whatsappBtn" class="btn green full" type="button">💬 CONFIRMAR POR WHATSAPP</button>
+        <button id="whatsappPapaBtn" class="btn green" type="button">👨 Confirmar con Papá</button>
+        <button id="whatsappMamaBtn" class="btn soft" type="button">👩 Confirmar con Mamá</button>
       </div>
-      <p style="margin:12px 0 0;color:#9f8b7c;font-size:.82rem">0993026341</p>
+
+      <div style="margin-top:14px;color:#9f8b7c;font-size:.82rem;line-height:1.7">
+        <div><strong>Papá:</strong> 0993026341</div>
+        <div><strong>Mamá:</strong> 0978700282</div>
+      </div>
+
       <p style="margin:26px 0 0;color:#c6a66e">★ ✦ 🧸 ✦ ★</p>
     </section>
 
@@ -618,9 +624,14 @@ button{touch-action:manipulation}
     result.textContent = "💙 ¡Tu presentimiento es Team Boy!";
   });
 
-  document.getElementById("whatsappBtn").addEventListener("click",function(){
-    const message = "Hola 👋 Confirmo mi asistencia a la revelación de género de José Andrés y Stefany Anahi el 6 de septiembre de 2026 a la 1:00 PM. 🌸🧸";
-    window.open("https://wa.me/593993026341?text=" + encodeURIComponent(message), "_blank");
+  const confirmationMessage = "Hola 👋 Confirmo mi asistencia a la revelación de género de José Andrés y Stefany Anahi el 6 de septiembre de 2026 a la 1:00 PM. 🤍🧸";
+
+  document.getElementById("whatsappPapaBtn").addEventListener("click",function(){
+    window.open("https://wa.me/593993026341?text=" + encodeURIComponent(confirmationMessage), "_blank");
+  });
+
+  document.getElementById("whatsappMamaBtn").addEventListener("click",function(){
+    window.open("https://wa.me/593978700282?text=" + encodeURIComponent(confirmationMessage), "_blank");
   });
 })();
 </script>
